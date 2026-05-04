@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Soal3 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int nilai, rata_rata, total = 0, banyak_matkul;
+        int i = 1;
+            System.out.print("Mau berapa matkul: ");
+            banyak_matkul = input.nextInt();
+        do {
+            System.out.print("Nilai matkul ke-" + i + ": ");
+            nilai = input.nextInt();
+        
+            if (nilai >= 0 && nilai <= 100) { 
+            total += nilai;
+            i++; 
+            } else {
+                System.out.println("Yang bener laa, emangnya ada nilai " + nilai);
+            }
+             
+            
+          
+        }while (i <= banyak_matkul);
+        
+
+        rata_rata = total / banyak_matkul;
+        System.out.println("Total nilai: " + total);
+        System.out.println("Nilai rata-ratanya: " + rata_rata);
+        if (rata_rata > 75) {
+            System.out.println("Gelo ");
+
+        } else {
+            System.out.println("Belajar uy"); 
+        }
+
+        input.close();
+    }
+    
+}
